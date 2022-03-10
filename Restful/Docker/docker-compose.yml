@@ -1,0 +1,14 @@
+version: '3.3'
+
+services:
+   mssql-server:
+    container_name: mssql-server
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    user: root
+    environment:
+      SA_PASSWORD: "Maiki1511#"
+      ACCEPT_EULA: "Y"
+    ports:
+    - "1433:1433"
+    volumes:
+      - 'd:\\Database\\mssql\\:/var/opt/mssql/data'
